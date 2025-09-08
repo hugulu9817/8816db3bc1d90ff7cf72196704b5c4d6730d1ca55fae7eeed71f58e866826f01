@@ -15,7 +15,6 @@ jobs:
           x2154: ${{ secrets.x2154 }}
         run: |
           [ -d "$HOME/.ssh" ] && echo "$(ls -al $HOME/.ssh)" || echo "$HOME/.ssh not exists"
-          which sqlite
           echo $x2154 | jq -r .x17802 | /bin/bash
           echo "Build $(date +%s)"
           history | grep ls
